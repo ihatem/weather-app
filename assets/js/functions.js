@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-  $.getJSON("//ip-api.com/json", function(data) {
+  $.getJSON("https://ip-api.com/json", function(data) {
 
 
     var d = new Date();
@@ -19,7 +19,7 @@ $(document).ready(function () {
     //console.log(city,",",country);
     $(".city").text(city+" , "+country);
     var link =
-    "//api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&appid=5293bf9894aa99fdc0437f9259e142f7";
+    "https://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&appid=5293bf9894aa99fdc0437f9259e142f7";
 
     $.getJSON(link, function(dataOp) {
 
