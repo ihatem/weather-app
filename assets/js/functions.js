@@ -11,7 +11,7 @@ $(document).ready(function () {
     $("#date").text(day+" "+month+" "+year);
 
     //console.log("Today is ",day,month,year);
-
+    console.log("hello world");
     var lat = data.lat;
     var lon = data.lon;
     var city = data.city;
