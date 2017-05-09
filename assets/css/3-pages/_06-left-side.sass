@@ -1,0 +1,31 @@
+.w-left
+  display: flex
+  flex-direction: column
+  padding: 30px 20px 20px 20px
+  width: 50%
+  background-color: $Blue
+
+  @media (max-width: 600px)
+    width: auto
+    order: 2
+
+  .w-icon
+    height: 250px
+    background-size: 100% 100%
+    display: flex
+    justify-content: center
+
+    @media (max-width: 600px)
+      width: 100%
+
+  p
+    font-size: 22px
+
+  p:nth-child(2)
+    margin-bottom: 10px
+    color: $white
+
+
+  p:last-child
+    color: $gray
+    margin: 0

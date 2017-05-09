@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- SEO -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="assets/img/favicons/favicon.ico">
+  <title>Weather App - Hatem Zehani</title>
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:title" content="Weather App - Hatem Zehani" />
+  <meta property="og:type" content="web application" />
+  <meta property="og:url" content="https://ihatem.github.io/weather-app" />
+  <meta property="og:image" content="assets/img/screen.png" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+  <!-- BODY CONTAINER -->
+  <div id="main">
+
+    <!-- HEADER -->
+    <header>
+      <h1>local weather</h1>
+      <hr></hr>
+      <h3 id="date">date</h3>
+    </header>
+
+    <!-- SECTION CONTAINER FOR WEATHER ARRAY -->
+    <section>
+
+      <div class="container">
+
+        <!-- CITY NAME -->
+        <div class="city">Strasbourg, France</div>
+
+        <!-- CONTENT -->
+        <div class="content">
+
+
+          <!-- LEFT SIDE -->
+          <div class="w-left">
+            <div class="w-icon"></div>
+            <p>Partly Cloudy</p>
+            <p>Slightly humid with a gentle breeze</p>
+          </div>
+
+          <!-- RIGHT SIDE -->
+          <div class="w-right">
+
+            <!-- degrees (c/f) -->
+            <div class="degree">
+              <div class="button-cf">
+                <input class="tgl tgl-skewed" id="cb3" type="checkbox" />
+                <label class="tgl-btn" data-tg-off="C°" data-tg-on="F°" for="cb3"></label>
+                </input>
+              </div>
+
+              <div class="degree-container">
+                <div class="degree-c">C</div>
+                <div class="degree-f">F</div>
+              </div>
+
+            </div>
+
+            <!-- wind and humidy (horizental) -->
+            <div class="w-misc">
+              <div class="wind">
+                <div class="icon"></div>
+                <p>5,7 m/s</p><span>&nbsp;m/s</span>
+              </div>
+              <div class="humidity">
+                <div class="icon"></div>
+                <p>5,7 m/s</p><span>&nbsp;%</span>
+              </div>
+            </div>
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+    <!-- END SECTION CONTAINER FOR WEATHER ARRAY  -->
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>Made with <span class="fa fa-heart"></span> by <a href="http://github.com/ihatem" target="_blank">Hatem Zehani</a></p>
+    </footer>
+
+  <!-- END BODY CONTAINER  -->
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="assets/js/min/functions-min.js"></script>
+  <script>
+
+    /* FIT BODY TO WINDOW SIZE */
+
+    function setHeiHeight() {
+      $('#main').css({
+        height: $(window).height() + 'px'
+      });
+    }
+
+    $(document).ready(function() {
+      $(window).resize(function() {
+        var bodyheight = $(this).height();
+        $("#main").height(bodyheight);
+      }).resize();
+    });
+    setHeiHeight(); // window height on first page loading
+    $(window).resize(setHeiHeight); // refreshing when window size changed
+
+  </script>
+
+</body>
+
+</html>
