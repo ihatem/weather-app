@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-  $.getJSON("//ip-api.com/json", function(data) {
+  $.getJSON("http://ip-api.com/json", function(data) {
 
 
     var d = new Date();
