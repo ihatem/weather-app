@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-  $.getJSON("http://ip-api.com/json", function(data) {
+  $.getJSON("//ipapi.co/json", function(data) {
 
 
     var d = new Date();
@@ -11,8 +11,8 @@ $(document).ready(function () {
     $("#date").text(day+" "+month+" "+year);
 
     //console.log("Today is ",day,month,year);
-    var lat = data.lat;
-    var lon = data.lon;
+    var lat = data.latitude;
+    var lon = data.longitude;
     var city = data.city;
     var country = data.country;
     //console.log(city,",",country);
