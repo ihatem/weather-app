@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-  $.getJSON("//ipapi.co/json", function(data) {
+  $.getJSON("https://ipapi.co/json", function(data) {
 
 
     var d = new Date();
@@ -14,21 +14,20 @@ $(document).ready(function () {
     var lat = data.latitude;
     var lon = data.longitude;
     var city = data.city;
-    var country = data.country;
+    var country = data.country_name;
     //console.log(city,",",country);
     $(".city").text(city+" , "+country);
-    var link =
-    "//api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&appid=5293bf9894aa99fdc0437f9259e142f7";
+    var link = "https://api.darksky.net/forecast/142c5de8355ba633fe6f4ee1530d6c27/"+lat+","+lon;
+    console.log(link);
 
     $.getJSON(link, function(dataOp) {
 
-      var tempK = dataOp.main.temp;
+      var tempF = Math.round(dataOp.currently.temperature);
 
-      var tempC = Math.round(tempK - 273.15);
+      var tempC = Math.round((tempF - 32) * (5/9)) ;
 
-      //console.log("Temperature C :",tempC);
-      var tempF = Math.round(tempK*(9/5)-459.67);
-      //console.log("Temperature F :",tempF);
+      console.log("Temperature C :",tempC);
+      console.log("Temperature F :",tempF);
 
       $(".degree-f").text(tempF);
       $(".degree-c").text(tempC);
