@@ -45,56 +45,61 @@ $(document).ready(function () {
 
       });
 
-      var windS = dataOp.wind.speed;
+      var windS = dataOp.currently.windSpeed;
       $(".wind > p").text(windS);
       //console.log("Wind Speed :",windS);
-      var humidity = dataOp.main.humidity;
+      var humidity = dataOp.currently.humidity;
       $(".humidity > p").text(humidity);
       //console.log("Humidity :",humidity);
-      var weatherDescr = dataOp.weather[0].description;
+      var weatherDescr = dataOp.hourly.summary;
       $(".w-left > p:last-child").text(weatherDescr);
       //console.log("Weather Description :",weatherDescr);
-      var weather = dataOp.weather[0].main;
+      var weather = dataOp.currently.summary;
       $(".w-left > p:nth-child(2)").text(weather);
       //console.log("Weather Status :",weather);
-      var weatherIcon = dataOp.weather[0].icon;
 
+      var weatherIcon = dataOp.currently.icon;
+      console.log(weatherIcon);
       switch (weatherIcon) {
-        case "01n":
-        case "01d":
-          $(".w-icon").css("background-image","url('./assets/img/sun.svg')");
+
+        case "clear-day":
+          skycons.add("icon1", Skycons.CLEAR_DAY);
           break;
-        case "02n":
-        case "02d":
-          $(".w-icon").css("background-image","url('./assets/img/sun-cloud.svg')");
+
+        case "clear-night":
+          skycons.add("icon1", Skycons.CLEAR_NIGHT);
           break;
-        case "03n":
-        case "03d":
-          $(".w-icon").css("background-image","url('./assets/img/s-clouds.svg')");
+
+        case "rain":
+          skycons.add("icon1", Skycons.RAIN);
           break;
-        case "04n":
-        case "04d":
-          $(".w-icon").css("background-image","url('./assets/img/s-clouds.svg')");
+
+        case "snow":
+          skycons.add("icon1", Skycons.SNOW);
           break;
-        case "09n":
-        case "09d":
-          $(".w-icon").css("background-image","url('./assets/img/rain.svg')");
+
+        case "sleet":
+          skycons.add("icon1", Skycons.SLEET);
           break;
-        case "10n":
-        case "10d":
-          $(".w-icon").css("background-image","url('./assets/img/rain.sv')g");
+
+        case "wind":
+          skycons.add("icon1", Skycons.WIND);
           break;
-        case "11n":
-        case "11d":
-          $(".w-icon").css("background-image","url('./assets/img/thunder.svg')");
+
+        case "fog":
+          skycons.add("icon1", Skycons.FOG);
           break;
-        case "13n":
-        case "13d":
-          $(".w-icon").css("background-image","url('./assets/img/snow.svg')");
+
+        case "cloudy":
+          skycons.add("icon1", Skycons.CLOUDY);
           break;
-        case "50n":
-        case "50d":
-          $(".w-icon").css("background-image","url('./assets/img/mist.svg')");
+
+        case "partly-cloudy-day":
+          skycons.add("icon1", Skycons.PARTLY_CLOUDY_DAY);
+          break;
+
+        case "partly-cloudy-night":
+          skycons.add("icon1", Skycons.PARTLY_CLOUDY_NIGHT);
           break;
       }
 

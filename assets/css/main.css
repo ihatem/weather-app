@@ -311,20 +311,18 @@ section {
     .w-left {
       width: auto;
       order: 2; } }
-  .w-left .w-icon {
-    height: 250px;
-    background-size: 100% 100%;
-    display: flex;
-    justify-content: center; }
-    @media (max-width: 600px) {
-      .w-left .w-icon {
-        width: 100%; } }
+  .w-left canvas {
+    margin: 0 auto;
+    margin-top: 40px; }
   .w-left p {
     font-size: 22px; }
   .w-left p:nth-child(2) {
-    margin-bottom: 10px;
+    margin-top: 50px;
+    margin-bottom: 5px;
     color: #ecf0f1; }
   .w-left p:last-child {
+    font-size: 16px;
+    hyphens: auto;
     color: #bdc3c7;
     margin: 0; }
 

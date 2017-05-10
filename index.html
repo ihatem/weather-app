@@ -48,7 +48,7 @@
 
           <!-- LEFT SIDE -->
           <div class="w-left">
-            <div class="w-icon"></div>
+            <canvas id="icon1" width="200" height="200"></canvas>
             <p>Partly Cloudy</p>
             <p>Slightly humid with a gentle breeze</p>
           </div>
@@ -103,6 +103,7 @@
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="assets/js/min/skycons-min.js"></script>
   <script src="assets/js/min/functions-min.js"></script>
   <script>
 
@@ -122,6 +123,10 @@
     });
     setHeiHeight(); // window height on first page loading
     $(window).resize(setHeiHeight); // refreshing when window size changed
+
+    // icons
+    var skycons = new Skycons({"color": "white"});
+    skycons.play();
 
   </script>
 
