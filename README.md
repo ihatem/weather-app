@@ -10,7 +10,7 @@ A small, flat designed and responsive website that generates the local weather u
 Github Pages : https://ihatem.github.io/weather-app/
 
 ## Screenshot 
-![App screenshot!](https://raw.githubusercontent.com/ihatem/Time-to-decimal/master/src/images/time-to-decimal-sketch.png)
+![App screenshot!](https://raw.githubusercontent.com/ihatem/weather-app/master/assets/img/weathe-app-sketch.png)
 
 
 ## Tools Used
